@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css">
+    <title>Document</title>
+    <style>
+        /* drop down styling */
+        
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 30px;
+        }
+        
+        .menu-bar {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            /* align-items: center; */
+            padding: 0 1%;
+        }
+        
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: rgb(2, 2, 2);
+            text-decoration: none;
+        }
+        
+        .menu-bar ul li a:hover {
+            color: rgb(255, 136, 0);
+        }
+        
+        .dropdown-menu {
+            display: none;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 10%;
+            background-color: white;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+        
+        .dropdown-menu-1 {
+            display: none;
+        }
+        
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: white;
+        }
+        /* drop down end */
+        /* nav */
+        
+        main {
+            height: 60px;
+            position: fixed;
+            top: 0px;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            /* border: 2px solid; */
+        }
+        
+        #nav {
+            height: 100px;
+            display: flex;
+        }
+        
+        #comp {
+            display: flex;
+            justify-content: end;
+            margin-top: 20px;
+            height: 40px;
+            /* border: 1px solid; */
+            width: 450px;
+        }
+        
+        #inp {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 40px;
+            width: 100%;
+            border: 0;
+            outline: none;
+            border-bottom: 2px solid;
+        }
+        
+        #search {
+            margin-top: 10px;
+            position: absolute;
+            margin-right: 10px;
+            background: transparent;
+            border: 0;
+            outline: none;
+            font-size: x-large;
+            cursor: pointer;
+        }
+        
+        #img img {
+            height: 40px;
+        }
+        
+        #img {
+            margin-top: 15px;
+            /* border: 2px solid; */
+            margin-left: 3%;
+        }
+        
+        #cont {
+            margin-top: 10px;
+            display: flex;
+            justify-content: end;
+        }
+        
+        #inpdiv {
+            width: 1300px;
+            margin-left: 6%;
+        }
+        
+        .profile {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            justify-content: end;
+            margin-right: 10%;
+            font-size: 30px;
+        }
+        /* nav end */
+        /* ADD TO CART CSS STARTS */
+        
+        #addtocart-data {
+            margin-top: 100px;
+            width: 100%;
+            /*border: 2px solid;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        .addchild {
+            height: 400px;
+            width: 300px;
+            /*border: 1px solid;*/
+            border-radius: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            background-image: linear-gradient(45deg, rgb(194, 188, 188), rgb(249, 246, 246), rgb(104, 104, 104));
+            box-shadow: 15px 0px 20px rgb(189, 209, 218);
+        }
+        
+        #addheader {
+            height: 100px;
+            width: 80%;
+            font-size: 140%;
+            /*border: 1px solid;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #addbutton {
+            background-image: linear-gradient(rgb(197, 198, 199), rgb(0, 0, 0));
+            color: rgb(255, 255, 255);
+            border: none;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            font-style: italic;
+        }
+        
+        @media(min-width: 200px) {
+            #addtocart-data {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .addchild {
+                height: 200px;
+                width: 150px;
+                /*border: 1px solid;*/
+                border-radius: 60px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 3%;
+            }
+            #addheader p {
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+            }
+            #addheader {
+                height: 50px;
+                width: 80%;
+                /*border: 1px solid;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #addbutton {
+                padding: 2px;
+                width: 70px;
+                font-size: 10px;
+                cursor: pointer;
+                border: none;
+            }
+            .addimages {
+                margin-top: 10px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+        
+        @media(min-width: 550px) {
+            #addtocart-data {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .addchild {
+                height: 300px;
+                width: 200px;
+                /* border: 1px solid;*/
+                border-radius: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 3%;
+            }
+            #addheader p {
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                font-family: cursive;
+
+            }
+            #addheader {
+                height: 70px;
+                width: 80%;
+                /*border: 1px solid;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #addbutton {
+                padding: 8px;
+                width: 150px;
+                cursor: pointer;
+                border: none;
+            }
+            .addimages {
+                margin-top: 10px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+        
+        @media(min-width: 750px) {
+            #addtocart-data {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .addchild {
+                height: 300px;
+                width: 200px;
+                margin-left: 2%;
+                border-radius: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 3%;
+            }
+            #addheader p {
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                font-family: cursive;
+
+            }
+            #addheader {
+                height: 70px;
+                width: 80%;
+                /*border: 1px solid;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #addbutton {
+                font-size: 12px;
+                padding: 8px;
+                width: 100px;
+                cursor: pointer;
+                border: none;
+            }
+            .addimages {
+                margin-top: 10px;
+                height: 70px;
+                width: 70px;
+            }
+        }
+        
+        @media(min-width: 950px) {
+            #addtocart-data {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .addchild {
+                height: 350px;
+                width: 300px;
+                /* border: 1px solid;*/
+                border-radius: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 3%;
+            }
+            #addheader p {
+                font-size: 30px;
+                font-weight: 700;
+                text-align: center;
+                font-family: cursive;
+
+            }
+            #addheader {
+                height: 70px;
+                width: 80%;
+                /* border: 1px solid;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #addbutton {
+                font-size: 15px;
+                padding: 8px;
+                width: 150px;
+                cursor: pointer;
+                border: none;
+            }
+            .addimages {
+                margin-top: 20px;
+                height: 100px;
+                width: 100px;
+            }
+        }
+        
+        @media(min-width: 1200px) {
+            #addtocart-data {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .addchild {
+                height: 400px;
+                width: 300px;
+                /* border: 1px solid;*/
+                border-radius: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 2%;
+            }
+            #addheader p {
+                font-size: 30px;
+                font-weight: 800;
+                text-align: center;
+                font-family: cursive;
+            }
+            #addheader {
+                height: 100px;
+                width: 80%;
+                /* border: 1px solid;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #addbutton {
+                font-size: 20px;
+                padding: 10px;
+                width: 200px;
+                cursor: pointer;
+                border: none;
+            }
+            .addimages {
+                margin-top: 20px;
+                height: 100px;
+                width: 100px;
+            }
+        }
+        /* ADD TO CART CSS ENDS */
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <div id="nav">
+                <div class="menu-bar">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>
+                                      <a href="#">LANGUAGE </a>
+                  
+                                      <div class="dropdown-menu-1">
+                                        <ul>
+                                          <li><a href="addto cart.html">ONLINE</a></li>
+                                          <li><a href="location.html">OFFLINE</a></li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li><a href="location.html">FIND A INSTITUTE</a></li>
+                                    <li><a href="offers.html">DEALS</a></li>
+                                    <li><a href="support.html">SUPPORT</a></li>
+                                  </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="img">
+                    <a href="mainpage.html"><img src="My project.png" alt="" id=""></a>
+                </div>
+                <div id="inpdiv">
+                    <div id="cont">
+                        <button type="submit" id="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input id="inp" placeholder="SEARCH" type="text">
+                    </div>
+                </div>
+                <div id="comp">
+                    <a href="main login.html" class="profile"><i id="cart" class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#" class="profile"><i id="cart" class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </form>
+    </main>
+    <div id="addtocart-data">
+        <div class="addchild" id="addchild1">
+            <div id="addicon"><img src="add to cart images\sql-document_icon-icons.com_57634.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>SQL</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild2">
+            <div id="addicon"><img src="add to cart images\java_original_wordmark_logo_icon_146459.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>CORE JAVA</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild3">
+            <div id="addicon"><img src="add to cart images\c_icon_132529.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>C++</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild4">
+            <div id="addicon"><img src="add to cart images\java_15498.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>J2EE</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild5">
+            <div id="addicon"><img src="add to cart images\python_vertical_logo_icon_168039.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>PYTHON</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild6">
+            <div id="addicon"><img src="add to cart images\internet_testing_browser_checking_icon_220429.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>MANUAL TESTING</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild7">
+            <div id="addicon"><img src="add to cart images\speed_monitoring_testing_optimization_icon_220424.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>AUTOMATION TESTING</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild8">
+            <div id="addicon"><img src="add to cart images\Xml-tool_37095.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>SELENIUM TOOL</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild9">
+            <div id="addicon"><img src="add to cart images\social_html5_html_71.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>HTML</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild10">
+            <div id="addicon"><img src="add to cart images\css3-01_icon-icons.com_50918.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>CSS</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+        <div class="addchild" id="addchild11">
+            <div id="addicon"><img src="add to cart images\js_filetype_icon_177532.png" alt="" class="addimages"></div>
+            <div id="addheader">
+                <p>JAVA SCRIPT</p>
+            </div>
+            <div id="abutton"><button type="button" id="addbutton">ADD TO CART</button></div>
+        </div>
+    </div>
+</body>
+
+</html>

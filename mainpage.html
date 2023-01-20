@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    <title>Document</title>
+    <style>
+        #data {
+            height: auto;
+            margin-top: 80px;
+            /* border: 2px solid; */
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        
+        #child {
+            height: 750px;
+            width: 320px;
+            border: 2px solid;
+            margin: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            box-shadow: 20px 0px 40px rgb(144, 143, 145);
+            background-image: linear-gradient(rgb(113, 184, 241), rgb(188, 215, 244), rgba(213, 238, 255, 0.753));
+        }
+        
+        #data ul li {
+            margin-top: 3%;
+            margin-left: 15%;
+        }
+        
+        #child ul li:hover {
+            color: rgb(224, 26, 26);
+            font-size: 140%;
+            cursor: pointer;
+        }
+        
+        #data ul h2 {
+            margin-top: 8%;
+            margin-left: 15%;
+        }
+        /* drop down styling */
+        
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 30px;
+        }
+        
+        .menu-bar {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            /* align-items: center; */
+            padding: 0 1%;
+        }
+        
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: rgb(2, 2, 2);
+            text-decoration: none;
+        }
+        
+        .menu-bar ul li a:hover {
+            color: rgb(255, 136, 0);
+        }
+        
+        .dropdown-menu {
+            display: none;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 10%;
+            background-color: white;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+        
+        .dropdown-menu-1 {
+            display: none;
+        }
+        
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: white;
+        }
+        /* drop down end */
+        /* nav */
+        
+        main {
+            height: 60px;
+            position: fixed;
+            top: 0px;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            /* border: 2px solid; */
+        }
+        
+        #nav {
+            height: 100px;
+            display: flex;
+        }
+        
+        #comp {
+            display: flex;
+            justify-content: end;
+            margin-top: 20px;
+            height: 40px;
+            /* border: 1px solid; */
+            width: 450px;
+        }
+        
+        #inp {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 40px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid;
+        }
+        
+        #search {
+            margin-top: 10px;
+            position: absolute;
+            margin-right: 10px;
+            background: transparent;
+            border: none;
+            font-size: x-large;
+            cursor: pointer;
+        }
+        
+        #img img {
+            height: 40px;
+        }
+        
+        #img {
+            margin-top: 15px;
+            /* border: 2px solid; */
+            margin-left: 3%;
+        }
+        
+        #cont {
+            margin-top: 10px;
+            display: flex;
+            justify-content: end;
+        }
+        
+        #inpdiv {
+            width: 1300px;
+            margin-left: 6%;
+        }
+        
+        .profile {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            justify-content: end;
+            margin-right: 10%;
+            font-size: 30px;
+        }
+        /* nav end */
+    </style>
+</head>
+
+<body>
+
+
+    <form action="">
+        <main>
+
+
+            <div id="nav">
+
+                <div class="menu-bar">
+                    <ul>
+                        <li>
+                            <a href="#"> <i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">LANGUAGE </a>
+
+                                        <div class="dropdown-menu-1">
+                                            <ul>
+                                                <li><a href="addto cart.html">ONLINE</a></li>
+                                                <li><a href="location.html">OFFLINE</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="location.html">FIND A INSTITUTE</a></li>
+                                    <li><a href="offers.html">DEALS</a></li>
+                                    <li><a href="support.html">SUPPORT</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div id="img">
+                    <a href="mainpage.html"><img src="../My project.png" alt="" id=""></a>
+                </div>
+
+                <div id="inpdiv">
+                    <div id="cont">
+                        <button type="submit" id="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input id="inp" placeholder="SEARCH" type="text">
+                    </div>
+                </div>
+                <div id="comp">
+                    <a href="main login.html" class="profile"><i id="cart" class="fa fa-user"
+                            aria-hidden="true"></i></a>
+                    <a href="#" class="profile"><i id="cart" class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </main>
+    </form>
+
+
+
+    <div id="data">
+        <div id="child">
+            <ul>
+                <h2>SQL</h2>
+                <li>INTRODUCTION OF SQL</li>
+                <li>RDBMS</li>
+                <li>CONSTRAINTS</li>
+                <li>JOINS</li>
+                <li>GROUPING</li>
+                <li>SUB-QUERIES</li>
+                <li>FUCTIONS</li>
+                <li>DDL, DML, TCL, DCL, DQL</li>
+                <li>NORMALIZATION</li>
+            </ul>
+        </div>
+
+
+        <div id="child">
+            <ul>
+                <h2>CORE JAVA</h2>
+                <li>INTRODUCTION OF CORE JAVA</li>
+                <li>TOKENS</li>
+                <li>DATATYPES</li>
+                <li>OPERATORS</li>
+                <li>LOOPING STATEMENTS</li>
+                <li>DECISION MAKING STATEMENTS</li>
+                <li>CONTROL TRANSFER STATEMENTS</li>
+                <li>METHODS</li>
+                <li>OOPs</li>
+                <li>STRING</li>
+                <li>ARRAY</li>
+                <li>CONSTRUCTOR</li>
+                <li>UPCASTING</li>
+                <li>DOWNCASTING</li>
+                <li>COLLECTION FRAMEWORK</li>
+                <li>EXCEPTION HANDLING</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>C++</h2>
+                <li>INTRODUCTION OF C/C++</li>
+                <li>OPERATORS</li>
+                <li>CONTROL STRUCTURE</li>
+                <li>FUNCTION OVERLOADING</li>
+                <li>ARRAYS OF OBJECTS</li>
+                <li>ARRAYS WITHIN A CLASS</li>
+                <li>RETURNING OBJECT</li>
+                <li>CONSTRUCTOR</li>
+                <li>DESTRUCTOR</li>
+                <li>OPERATOR OVERLOADING</li>
+                <li>RULES FOR OVERLOADING</li>
+                <li>TYPE CONVERSION</li>
+                <li>INHERITANCE</li>
+                <li>NESTING OF CLASSES</li>
+                <li>POINTERS</li>
+                <li>FILE STREAM CLASSES</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>J2EE</h2>
+                <li>INTRODUCTION OF J2EE</li>
+                <li>WEB SERVER</li>
+                <li>APPLICATION SERVER</li>
+                <li>TOMCAT</li>
+                <li>JBOSS SERVER</li>
+                <li>ANT TOOL</li>
+                <li>JAVA SERVLRT TECHNOLOGY</li>
+                <li>JSP TECHNOLOGY</li>
+                <li>CUSTOM TAGS IN JSP PAGES</li>
+                <li>AJAX</li>
+                <li>PROJECT DEVELOPMENT</li>
+                <li>IDE</li>
+                <li>XML PROGRAMMING</li>
+                <li>WEB-SERVICES</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>PYTHON</h2>
+                <li>INTRODUCTION OF PYTHON</li>
+                <li>DATA-TYPES</li>
+                <li>VARIABLES</li>
+                <li>TYPECASTING</li>
+                <li>OPERATORS</li>
+                <li>CONSOLE</li>
+                <li>CONDITIONAL STATEMENTS</li>
+                <li>PYTHON COLLECTION</li>
+                <li>STRING MANIPULATION</li>
+                <li>LAMBDA FUCTION</li>
+                <li>IMPORTING MODULES</li>
+                <li>OOPs IN PYTHON</li>
+                <li>CLASS AND OBJECT</li>
+                <li>CONSTRUCTORS</li>
+                <li>INHERITANCE</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>MANUAL TESTING</h2>
+                <li>INTRODUCTION OF MANUAL TESTING</li>
+                <li>SOFTWARE TESTING</li>
+                <li>SDLC</li>
+                <li>STLC</li>
+                <li>FUNCTIONAL TESTING</li>
+                <li>INTEGRATION TESTING</li>
+                <li>SYSTEM TESTING</li>
+                <li>SMOKE TESTING</li>
+                <li>ADHOC TESTING</li>
+                <li>COMPATIBILITY TESTING</li>
+                <li>GLOBALIZATION TESTING</li>
+                <li>EXPLORATION TESTING</li>
+                <li>ACCEPTANCE TESTING</li>
+                <li>PERFORMANCE TESTING</li>
+                <li>USABILITY TESTING</li>
+                <li>WRITING, REVIEWING AND EXECUTING TEST CASES</li>
+                <li>DEFECT LIFE CYCLE</li>
+                <li>JIRA</li>
+                <li>AGILE METHODOLOGY : SCRUM</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>AUTOMATION <br> TESTING</h2>
+                <li>INTRODUCTION OF AUTOMATION TESTING</li>
+                <li>SDLC DEVELOPMENT MODELS</li>
+                <li>AGILE MODEL</li>
+                <li>SCRUM MODEL</li>
+                <li>UNIT TESTING</li>
+                <li>INTEGRATION TESTING</li>
+                <li>SYSTEM TESTING</li>
+                <li>SANITY TESTING</li>
+                <li>GUI TESTING</li>
+                <li>LOAD / STRESS TESTING</li>
+                <li>REGRESSION / FUNCTIONAL TESTING</li>
+                <li>BLACK BOX TEST TECHNIQUES</li>
+                <li>WHITE BOX TEST TECHNIQUES</li>
+                <li>TYPES OF TEST CASES</li>
+                <li>TEST CASE TEMPLATES</li>
+                <li>TEST PLAN DOCUMENTS</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>SELENIUM TOOL</h2>
+                <li>INTRODUCTION OF SELENIUM TOOL</li>
+                <li>ADVANTAGES OF SELENIUM AUTOMATION TESTING</li>
+                <li>SELENIUM RC</li>
+                <li>SELENIUM IDE FUNCTIONS AND COMMANDS</li>
+                <li>SIKULI</li>
+                <li>JUNIT</li>
+                <li>TEST-NG PLUGIN</li>
+                <li>OBJECT REPOSITORY & MAVEN</li>
+                <li>SELENIUM WEB-DRIVER</li>
+                <li>SELENIUM GRID</li>
+                <li>SELENIUM IDE</li>
+                <li>TESTING FRAMEWORK</li>
+                <li>SELENIUM COMPONENTS</li>
+                <li>ACTIONS, ASSERTS, ASSESSORS</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>HTML</h2>
+                <li>INTRODUCTION OF HTML</li>
+                <li>TABLES</li>
+                <li>LIST</li>
+                <li>ELEMENTS</li>
+                <li>COLORS</li>
+                <li>ATTRIBUTE</li>
+                <li>HYPERLINK</li>
+                <li>FORMS</li>
+                <li>LAYOUT</li>
+                <li>HEADINGS</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>CSS</h2>
+                <li>INTRODUCTION OF CSS</li>
+                <li>COLORS</li>
+                <li>DESIGNS</li>
+                <li>FAVICONS</li>
+                <li>ICONS</li>
+                <li>SVG IMAGES</li>
+                <li>BOX MODEL</li>
+                <li>CSS SELECTORS</li>
+                <li>CSS IMPLEMENTATION</li>
+                <li>BORDER</li>
+                <li>PADDING</li>
+                <li>LAYOUT</li>
+            </ul>
+        </div>
+        <div id="child">
+            <ul>
+                <h2>JAVA SCRIPT</h2>
+                <li>INTRODUCTION OF JAVA-SCRIPT</li>
+                <li>FEATURS OF JAVA-SCRIPT</li>
+                <li>DATATYPES</li>
+                <li>VARIABLES</li>
+                <li>OPERATORS</li>
+                <li>STATEMENTS</li>
+                <li>JAVA-SCRIPT FUNCTION</li>
+                <li>OBJECT IN JAVA-SCRIPT</li>
+                <li>JAVA-SCRIPT WINDOW</li>
+                <li>JAVA-SCRIPT FRAME OBJECTS</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
